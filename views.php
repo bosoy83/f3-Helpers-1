@@ -25,13 +25,14 @@ class views extends View{
 		@param $format array
 	**/
   function toJson($obj,$format=array()){
+    if(!$obj)
+		  return;
     $fw=Base::instance();
     if (isset($_COOKIE[session_name()]))
 			@session_start();
 		$fw->sync('SESSION');
 		$hive=$fw->hive();
-		if(!$obj)
-		  return;
+		
     if(is_array($obj)){
       $output=array();
       foreach($obj as $item){
