@@ -1,6 +1,6 @@
 <?php
 /**
- * Views class extending native View class updated from Helpers
+ * Views class extending native View class
  *
  * @package 1.0
  */
