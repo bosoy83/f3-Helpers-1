@@ -43,7 +43,6 @@ class views extends View{
       
     if(F3::get('AJAX')&&F3::get('REQUEST.callback')){
       return F3::get('REQUEST.callback').'('.json_encode($output).')';
-      
     }
     return json_encode($output);
   
