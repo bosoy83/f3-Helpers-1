@@ -76,7 +76,7 @@ final class Base {
 		//! Fallback language
 		FALLBACK='en',
 		//! Syntax highlighting stylesheet
-		CSS='code.css';
+		CSS='code.css',
 
 	//@{ HTTP request types
 	const
