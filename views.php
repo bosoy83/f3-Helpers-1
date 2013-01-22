@@ -50,11 +50,13 @@ class views extends View{
   }
   
   protected function _dataSet($format,$item){
-    return array_map(function($elmt) use($item){
-      if(isset($item->$elmt))
-        return $item->$elmt;
-      },$format);
-  }
+     return array_map(function($elmt) use($item){
+       if(is_object($item)&&isset($item->$elmt))
+         return $item->$elmt;
+       if(is_array($item)&&isset($item[$elmt]))
+         return $item[$elmt];
+       },$format);
+   }
   
 }
 
